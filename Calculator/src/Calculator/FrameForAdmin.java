@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 
 public class FrameForAdmin extends JFrame {
     FrameForAdmin(){
+    	super("Расчет загрузки принтера для администратора");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(500,500);
         setLocationRelativeTo(null);
@@ -22,21 +23,50 @@ public class FrameForAdmin extends JFrame {
         panelForFrameForAdminLabel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
         JPanel panelForFrameForAdmin = new JPanel();
-        panelForFrameForAdmin.setLayout(new GridLayout(3,3,10,20));
+        panelForFrameForAdmin.setLayout(new GridLayout(7,7,10,20));
+        
+        JLabel labelForNumber1 = new JLabel("Расход бумаги");
+        panelForFrameForAdmin.add(labelForNumber1);
+        final JTextField textFieldForNumber1 = new JTextField();
+        panelForFrameForAdmin.add(textFieldForNumber1);
+        JLabel labelForPackaging1 = new JLabel("упаковок");
+        panelForFrameForAdmin.add(labelForPackaging1);
+        
+        JLabel labelForNumber2 = new JLabel("Расход красного");
+        panelForFrameForAdmin.add(labelForNumber2);
+        final JTextField textAreaForNumber2 = new JTextField();
+        panelForFrameForAdmin.add(textAreaForNumber2);
+        JLabel label3 = new JLabel("мл.");
+        panelForFrameForAdmin.add(label3);
+        
+        JLabel labelForNumber3 = new JLabel("Расход синего");
+        panelForFrameForAdmin.add(labelForNumber3);
+        final JTextField textAreaForNumber3 = new JTextField();
+        panelForFrameForAdmin.add(textAreaForNumber3);
+        JLabel label5 = new JLabel("мл.");
+        panelForFrameForAdmin.add(label5);
+        
+        JLabel labelForNumber4 = new JLabel("Расход черного");
+        panelForFrameForAdmin.add(labelForNumber4);
+        final JTextField textAreaForNumber4 = new JTextField();
+        panelForFrameForAdmin.add(textAreaForNumber4);
+        JLabel label6 = new JLabel("мл.");
+        panelForFrameForAdmin.add(label6);
+   
+        JLabel labelForLoad = new JLabel("Расход желтого");
+        panelForFrameForAdmin.add(labelForLoad);
+        final JTextField textAreaForLoad = new JTextField();
+        panelForFrameForAdmin.add(textAreaForLoad);
+        JLabel label4 = new JLabel("мл.");
+        panelForFrameForAdmin.add(label4);
 
-        JLabel labelForNumber = new JLabel("Расход бумаги");
+        JLabel labelForNumber = new JLabel("Расход тонера");
         panelForFrameForAdmin.add(labelForNumber);
         final JTextField textFieldForNumber = new JTextField();
         panelForFrameForAdmin.add(textFieldForNumber);
-        JLabel labelForPackaging = new JLabel("упаковок");
+        JLabel labelForPackaging = new JLabel("штук");
         panelForFrameForAdmin.add(labelForPackaging);
 
-        JLabel labelForCartridge = new JLabel("Расход катриджей");
-        panelForFrameForAdmin.add(labelForCartridge);
-        final JTextField textFieldForCartridge = new JTextField();
-        panelForFrameForAdmin.add(textFieldForCartridge);
-        JLabel labelForPieces = new JLabel("штук");
-        panelForFrameForAdmin.add(labelForPieces);
 
         JLabel labelForPay = new JLabel("Стоимость расходов");
         panelForFrameForAdmin.add(labelForPay);

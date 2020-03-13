@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 
 public class FrameUserSelection extends JFrame {
     FrameUserSelection(){
+    	super("Выбор пользователя");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(400,200);
         setLocationRelativeTo(null);

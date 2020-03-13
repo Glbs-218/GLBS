@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 
 public class FrameForAdminPassword extends JFrame {
     FrameForAdminPassword(){
+    	super("Пароль");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(200,200);
         setLocationRelativeTo(null);

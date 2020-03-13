@@ -12,8 +12,9 @@ import java.awt.event.ActionEvent;
 public class FrameForWorker extends JFrame {
 
     FrameForWorker(){
+    	super("Расчет загрузки принтера для работника");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(600,500);
+        setSize(650,500);
         setLocationRelativeTo(null);
 
         JPanel panelForWorker = new JPanel();
@@ -26,6 +27,7 @@ public class FrameForWorker extends JFrame {
         GridBagConstraintsForPanelForWorkerForTextAreas gridAreas = new GridBagConstraintsForPanelForWorkerForTextAreas();
         GridBagConstraintsForPanelForWorkerForButton gridButtonCalculation = new GridBagConstraintsForPanelForWorkerForButton();
         GridBagConstraintsForPanelForWorkerForButton gridButtonExit = new GridBagConstraintsForPanelForWorkerForButton();
+        
         gridButtonExit.gridx = 1;
 
         JLabel labelForPanelForWorker = new JLabel("Работник");
@@ -62,7 +64,7 @@ public class FrameForWorker extends JFrame {
         panelForWorker.add(panelForTextFields);
 
         JPanel panelForTextAreas = new JPanel();
-        panelForTextAreas.setLayout(new GridLayout(3,3,10,10));
+        panelForTextAreas.setLayout(new GridLayout(6,6,10,10));
         JLabel labelForPaper = new JLabel("Расход бумаги");
         panelForTextAreas.add(labelForPaper);
         final JTextArea textAreaForPaper = new JTextArea();
@@ -70,19 +72,39 @@ public class FrameForWorker extends JFrame {
         JLabel label1 = new JLabel("упаковок");
         panelForTextAreas.add(label1);
 
-        JLabel labelForCartridge = new JLabel("Расход катриджей");
+        JLabel labelForCartridge = new JLabel("Расход тонера");
         panelForTextAreas.add(labelForCartridge);
         final JTextArea textAreaForCartridge = new JTextArea();
         panelForTextAreas.add(textAreaForCartridge);
         JLabel label2 = new JLabel("штук");
         panelForTextAreas.add(label2);
-
-
-        JLabel labelForLoad = new JLabel("Нагрузка на принтер");
+        
+        JLabel labelForCartridge1 = new JLabel("Расход красного");
+        panelForTextAreas.add(labelForCartridge1);
+        final JTextArea textAreaForCartridge1 = new JTextArea();
+        panelForTextAreas.add(textAreaForCartridge1);
+        JLabel label3 = new JLabel("мл.");
+        panelForTextAreas.add(label3);
+        
+        JLabel labelForCartridge2 = new JLabel("Расход синего");
+        panelForTextAreas.add(labelForCartridge2);
+        final JTextArea textAreaForCartridge2 = new JTextArea();
+        panelForTextAreas.add(textAreaForCartridge2);
+        JLabel label5 = new JLabel("мл.");
+        panelForTextAreas.add(label5);
+        
+        JLabel labelForCartridge3 = new JLabel("Расход черного");
+        panelForTextAreas.add(labelForCartridge3);
+        final JTextArea textAreaForCartridge3 = new JTextArea();
+        panelForTextAreas.add(textAreaForCartridge3);
+        JLabel label6 = new JLabel("мл.");
+        panelForTextAreas.add(label6);
+   
+        JLabel labelForLoad = new JLabel("Расход желтого");
         panelForTextAreas.add(labelForLoad);
         final JTextArea textAreaForLoad = new JTextArea();
         panelForTextAreas.add(textAreaForLoad);
-        JLabel label4 = new JLabel("%");
+        JLabel label4 = new JLabel("мл.");
         panelForTextAreas.add(label4);
         gridBagLayout.setConstraints(panelForTextAreas,gridAreas);
         panelForWorker.add(panelForTextAreas);
